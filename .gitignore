@@ -1,0 +1,5 @@
+package-lock.json
+node_modules
+media
+lacanPortfolio/static/css/.sass-cache
+*/.pyc
