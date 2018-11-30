@@ -1,0 +1,30 @@
+
+.navbar:hover{
+  animation-duration: 3s;
+  animation-name: hideUl;
+}
+.navbar{
+
+ul:hover{
+    // animation-duration: 3s;
+}
+}
+
+@keyframes slideinBar{
+  from {
+    width:100%;
+  }
+  to {
+    width:0;
+  }
+}
+
+@keyframes hideUl{
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity:0;
+    display:none;
+  }
+}

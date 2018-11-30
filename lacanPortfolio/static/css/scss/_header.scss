@@ -10,6 +10,7 @@ header{
     padding:$padding;
     background-color: $secondaryColor;
     color:$primaryTextColor;
+// ------------------ V2 -------------
 
     a{
       color:$primaryTextColor;
@@ -20,11 +21,16 @@ header{
       margin: 2% 0;
     }
     ul{
+
       list-style: none;
       display: flex;
       justify-content: end;
       padding: 0;
       width: 50%;
+// ------------------ V2 -------------
+      // flex-direction: column;
+      // justify-content: space-around;
+
       li{
         text-transform: full-width;
         font-size: 80%;
@@ -46,7 +52,40 @@ header{
       }
     }
   }
+
+
+  .navbar-fixed {
+      animation-duration: 3s;
+      animation-name: slideinBar;
+      flex-direction: column;
+      position: fixed;
+      left: 0;
+      top:0;
+      height: 100%;
+      width: 10%;
+
+
 }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
