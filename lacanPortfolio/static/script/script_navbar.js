@@ -1,8 +1,7 @@
 $(document).ready(function(){
 
-
-
-
+var $titleNav = $("#titleNav");
+var $listNav = $("#listNav");
 var $navbar = $("#navbar"),
         y_pos = $navbar.offset().top,
         height = $navbar.height();
@@ -24,6 +23,15 @@ var $navbar = $("#navbar"),
     });
 
 
+
+// -----------------------JS for fade out Liste ----------
+  $navbar.click(function(){
+      $listNav.addClass("listFadeOut");
+      $(this).addClass("navbar-fixed");
+      $titleNav.addClass("eventText");
+  });
+
+  
 
 
 
