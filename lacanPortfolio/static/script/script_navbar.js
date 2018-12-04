@@ -1,39 +1,84 @@
 $(document).ready(function(){
 
-var $titleNav = $("#titleNav");
-var $listNav = $("#listNav");
-var $navbar = $("#navbar"),
-        y_pos = $navbar.offset().top,
-        height = $navbar.height();
+var btnNav = $("#btnNav");
+var navBar = $("#navbar");
+var sectionCont = $("#mainSection")
+var listNav = $("#listNav");
+var titleNav = $("#titleNav");
+
+btnNav.click(function(){
+  if(navBar.hasClass("navbarBase")){
+    navBar.removeClass("navbarBase");
+    navBar.toggleClass("navbarLeft");
+    titleNav.addClass("titleblur");
+    listNav.animate({opacity:0},500);
+    setTimeout(addClassUl,1500)
+    function addClassUl(){
+      listNav.addClass("ulLeft");
+      listNav.animate({opacity:1},500);
+      titleNav.removeClass("titleblur");
+    };
+
+  }
+  else if(navBar.hasClass("navbarLeft") ){
+    listNav.animate({opacity:0},500);
+    setTimeout(blurTitle,400);
+    function blurTitle(){
+      titleNav.addClass("titleblur");
+    }
+    setTimeout(changeClassNavbar,500);
+    function changeClassNavbar(){
+      navBar.toggleClass("navbarTop").delay(500);
+      navBar.removeClass("navbarLeft");
+      listNav.removeClass("ulLeft");
+      listNav.addClass("ulTop");
+      setTimeout(displayList,1500);
+      function displayList(){
+        listNav.animate({opacity:1},500);
+        titleNav.removeClass("titleblur");
+
+      }
+    }
+    }
+  else{
+    navBar.removeClass("navbarTop");
+    navBar.toggleClass("navbarLeft");
+    titleNav.addClass("titleblur");
+
+    listNav.animate({opacity:0},500);
+    setTimeout(addClassUl,1500)
+    function addClassUl(){
+      listNav.removeClass("ulTop");
+      listNav.addClass("ulLeft");
+      listNav.animate({opacity:1},500);
+      titleNav.removeClass("titleblur");
+
+    };
+
+  }
 
 
-    $(document).scroll(function() {
-        var scrollTop = $(this).scrollTop();
-
-        if (scrollTop > y_pos + height) {
-            $navbar.addClass("navbar-fixed").animate({
-              top:0
-            });
-
-        } else if (scrollTop <= y_pos) {
-            $navbar.removeClass("navbar-fixed").clearQueue().animate({
-                top: "-48px"
-            }, 0);
-        }
-    });
 
 
 
-// -----------------------JS for fade out Liste ----------
-  $navbar.click(function(){
-      $listNav.addClass("listFadeOut");
-      $(this).addClass("navbar-fixed");
-      $titleNav.addClass("eventText");
-  });
-
-  
+});
 
 
 
 
-})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+});

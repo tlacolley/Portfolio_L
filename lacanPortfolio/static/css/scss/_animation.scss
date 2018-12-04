@@ -1,87 +1,63 @@
-
-.navbar{
-  animation-duration: 3s;
-  // animation-name: slideinBar;
-}
-
-  .navbar-fixed {
-      animation-duration: 3s;
-      animation-delay:1s;
-      animation-name: scale_down_nav;
-      animation-fill-mode: forwards;
-}
-
-
-
-
-.eventText{
-  animation-duration: 2s;
-  animation-name:text_fabien_blur_focus;
-  animation-delay:1.5s;
-  animation-timing-function: linear;
-
-}
-
-
-@keyframes text_fabien_blur_focus{
-  from{
-    filter: blur(0.01);
+@keyframes nabBarLeftAnimate{
+  0%{
+    height:5rem;
+    width:100%;
   }
   50%{
-    letter-spacing: -0.5em;
-    filter: blur(12px) opacity(0%);
+      height:5rem;
+      width:10%;
   }
-  to{
-   
-    filter: blur(12px);
-    opacity: 1;
+  100%{
+      width:10%;
+      flex-direction:column;
+      height:100%;
+      top:0;
+      left:0;
   }
+}
+@keyframes nabBarTopAnimate{
+  0%{
+    width:10%;
+    flex-direction:column;
+    height:100%;
+    top:0;
+    left:0;
+  }
+  50%{
+      height:5rem;
+      flex-direction:row;
+      width:10%;
+  }
+  100%{
 
+      height:5rem;
+      width:100%;
+  }
 }
 
 
 
-@keyframes scale_down_nav{
-  from {
-    flex-direction: row;
-    position: relative;
-    width:100%;
-    height:5rem;
-  }
-  to {
-    // flex-direction: column;
-    // position: fixed;
-    // left: 0;
-    // top:0;
-    // height: 100%;
-    width: 10%;
-    height:5rem;
+@keyframes blurTitleNav{
+  0%{
+    line-height: 1rem;
+    filter:blur(0px)
 
   }
-}
-
-
-
-
-
-
-
-// -----------------------Animation for fade out Liste ----------
-.listFadeOut{
-    animation-name: fadeOut_ul;
-    animation-duration: 1s;
-    opacity:0;
-    display:none;
-
-}
-
-
-@keyframes fadeOut_ul{
-  from{
-    opacity: 1;
+  10%{
+    line-height:-12px;
+    filter:blur(20px)
   }
-  to{
-    opacity:0;
-    display:none;
+  50%{
+    line-height:1rem;
+
+  }
+  80%{
+    filter:blur(20px)
+  }
+
+  100%{
+    line-height: 1rem;
+    filter:blur(0px)
   }
 }
+

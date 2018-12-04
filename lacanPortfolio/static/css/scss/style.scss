@@ -3,7 +3,11 @@
 @import 'mixins';
 @import 'animation';
 @import 'header';
+@import 'main';
 
+html,body,#containerNav,.container,header{
+  height:100%;
+}
 body{
   margin: 0;
   .container{

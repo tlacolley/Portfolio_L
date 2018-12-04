@@ -1,118 +1,69 @@
 header{
+    h1{
+      color: $primaryColor;
+    }
+    #btnNav{
+      position: fixed;
+      top: 50px;
+      right: 0;
+    }
 
-  h1{
-    color: $primaryColor;
-  }
+    //  Class for animation Navbar
+    .navbarBase{
+      height:5rem;
+    }
+    .navbarTop{
+      animation: nabBarTopAnimate 2s forwards;
+    }
+    .navbarLeft{
+      height:5rem;
+      animation: nabBarLeftAnimate 2s 0.5s forwards;
 
-  .navbar{
-    display:flex;
-    justify-content: space-around;
-    padding:$padding;
-    background-color: $secondaryColor;
-    color:$primaryTextColor;
-    height:5rem;
-// ------------------ V2 -------------
-
-    a{
+    }
+    //  Css base Navbar 
+    nav{
+      display:flex;
+      justify-content: space-around;
+      padding:$padding;
+      background-color: $secondaryColor;
       color:$primaryTextColor;
-      text-decoration: none;
-    }
-    h2,ul{
-      text-align: center;
-      margin: 2% 0;
-    }
-    ul{
-
-      list-style: none;
-      display: flex;
-      justify-content: end;
-      padding: 0;
-      width: 50%;
-// ------------------ V2 -------------
-      // flex-direction: column;
-      // justify-content: space-around;
-
-      li{
-        text-transform: full-width;
-        font-size: 80%;
-        font-weight: bolder;
+      a{
+        color:$primaryTextColor;
+        text-decoration: none;
       }
-      // li:hover{
-      //   font-style: italic;
-      //   font-size: 100%;
-      // }
-
-    }
-    button{
-      background: $primaryColor;
-      span{
+      h2,ul{
+        text-align: center;
+        margin: 2% 0;
+      }
+      .ulLeft{
+        flex-direction: column;
+        justify-content: space-around;
+      }
+      .ulTop{
+        flex-direction: row;
+         justify-content: end;
+      }
+      // List base 
+      ul{
+        list-style: none;
         display: flex;
-        justify-content: center;
-        flex-direction: column;
-        font-weight: bold;
-      }
-    }
-  }
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width:990px) {
-header {
-
-  .navbar{
-      ul{
-        display:grid;
-        grid-template-columns: 1fr 1fr;
-         li{
-          font-size: 100%;
-        }
-      }
-
-   }
-
-  }
-}
-
-@media screen and (max-width:500px) {
-header {
-
-  .navbar{
-      ul{
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
+        justify-content: end;
+        padding: 0;
+        width: 50%;
         li{
+          text-transform: full-width;
           font-size: 80%;
+          font-weight: bolder;
         }
-    
       }
 
-   }
 
-  }
+
+      .titleblur{
+        animation:blurTitleNav 1s 0.5s;
+      }
+
+
+
+    }
 }
-
-
