@@ -35,29 +35,27 @@
   }
 }
 
-
-
 @keyframes blurTitleNav{
-  0%{
-    line-height: 1rem;
-    filter:blur(0px)
+  // 0%{
+  //   line-height: 1rem;
+  //   filter:blur(0px)
 
-  }
-  10%{
-    line-height:-12px;
-    filter:blur(20px)
-  }
-  50%{
-    line-height:1rem;
+  // }
+  // 10%{
+  //   line-height:-12px;
+  //   filter:blur(20px)
+  // }
+  // 50%{
+  //   line-height:1rem;
 
-  }
-  80%{
-    filter:blur(20px)
-  }
+  // }
+  // 80%{
+  //   filter:blur(20px)
+  // }
 
-  100%{
-    line-height: 1rem;
-    filter:blur(0px)
-  }
+  // 100%{
+  //   line-height: 1rem;
+  //   filter:blur(0px)
+  // }
 }
 

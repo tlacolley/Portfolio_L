@@ -5,6 +5,9 @@ var navBar = $("#navbar");
 var sectionCont = $("#mainSection")
 var listNav = $("#listNav");
 var titleNav = $("#titleNav");
+var iconlist = $(".nav-link-icon");
+var labelList = $(".nav-link-label");
+
 
 btnNav.click(function(){
   if(navBar.hasClass("navbarBase")){
@@ -15,6 +18,9 @@ btnNav.click(function(){
     setTimeout(addClassUl,1500)
     function addClassUl(){
       listNav.addClass("ulLeft");
+      labelList.hide();
+      iconlist.show();
+
       listNav.animate({opacity:1},500);
       titleNav.removeClass("titleblur");
     };
@@ -34,9 +40,11 @@ btnNav.click(function(){
       listNav.addClass("ulTop");
       setTimeout(displayList,1500);
       function displayList(){
+        
+        labelList.show();
+        iconlist.hide();
         listNav.animate({opacity:1},500);
         titleNav.removeClass("titleblur");
-
       }
     }
     }
@@ -50,6 +58,9 @@ btnNav.click(function(){
     function addClassUl(){
       listNav.removeClass("ulTop");
       listNav.addClass("ulLeft");
+      labelList.hide();
+      iconlist.show();
+
       listNav.animate({opacity:1},500);
       titleNav.removeClass("titleblur");
 
