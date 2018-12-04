@@ -11,13 +11,17 @@ header{
     //  Class for animation Navbar
     .navbarBase{
       height:5rem;
+
     }
     .navbarTop{
-      animation: nabBarTopAnimate 2s forwards;
+      animation: navBarTopAnimate 2s  forwards;
+    }
+    .navbarTopFixed{
+      animation: navBarTopFixedAnim 2s forwards;
     }
     .navbarLeft{
       height:5rem;
-      animation: nabBarLeftAnimate 2s 0.5s forwards;
+      animation: navBarLeftAnimate 2s 0.5s forwards;
 
     }
     //  Css base Navbar 
@@ -49,6 +53,7 @@ header{
         display: flex;
         justify-content: end;
         padding: 0;
+        padding-right: 10%;
         width: 50%;
         li{
           text-transform: full-width;
