@@ -25,7 +25,7 @@
   }
 }
 @keyframes navBarTopAnimate{
-  
+
   0%{
     width:10%;
     flex-direction:column;
@@ -46,7 +46,30 @@
   }
 }
 
+@keyframes iconDisplay{
+  0%{
+    opacity:0;
+    font-size: 2rem;
+    filter:blur(10px);
+    text-shadow:  0px 0px 0px rgba(0,214,252,1);
+    // text-shadow: -3px -8px 9px #f78aa0;
+    
+  }
+  50%{
+    font-size: 5rem;
+    filter:blur(1px);
+    text-shadow: 0px 0px 60px rgba(0,214,252,1);
 
+
+  }
+  100%{
+    opacity:1;
+    font-size: 4rem;
+    filter:blur(0px);
+    text-shadow: 0px 0px  10px rgba(0,214,252,1);
+
+  }
+}
 
 
 @keyframes blurTitleNav{

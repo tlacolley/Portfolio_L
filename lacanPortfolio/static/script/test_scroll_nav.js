@@ -6,9 +6,31 @@ var navBar = $("#navbar");
 var sectionCont = $("#mainSection")
 var listNav = $("#listNav");
 var titleNav = $("#titleNav");
-var iconlist = $(".nav-link-icon");
+var iconList = $(".nav-link-icon");
 var labelList = $(".nav-link-label");
 var main = $("#main");
+
+
+btnNav.click(function(){
+  
+  function displayIcon(icon){
+      icon.addClass("iconlistAnim");
+    };
+  var time = 0;
+  iconList.each(function(){
+    time += 500;
+    var icon = $(this);
+    setTimeout(function(){
+      icon.addClass("iconlistAnim");
+    },time);
+
+  });
+
+})
+
+
+
+
 
 // Functions --------------
     function changeMainRight(){
@@ -19,7 +41,7 @@ var main = $("#main");
     function addClassUl(){
       listNav.addClass("ulLeft");
       labelList.hide();
-      iconlist.show();
+      iconList.show();
       // Display Icon and title ----
       listNav.animate({opacity:1},700);
       titleNav.animate({opacity:1},700);
@@ -92,7 +114,7 @@ var main = $("#main");
               setTimeout(displayList,1500);
               function displayList(){
                 labelList.show();
-                iconlist.hide();
+                iconList.hide();
                 listNav.animate({opacity:1},700);
                 titleNav.animate({opacity:1},700);
               }
