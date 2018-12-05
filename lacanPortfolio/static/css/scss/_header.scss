@@ -60,14 +60,19 @@ header{
 
         }
       }
+      .opacityOff{
+        animation: hideList,0.5s forwards;
+      }
+      .opacityOn{
+        animation: showList,0.5s forwards;
 
-
+      }
       .nav-link-icon{
         display:none;
         font-size:4rem;
       }
       .iconlistAnim{
-        animation:iconDisplay 2s forwards;
+        animation:iconDisplay 1s forwards;
       }
 
       .titleblur{

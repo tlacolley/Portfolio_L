@@ -11,26 +11,23 @@ var labelList = $(".nav-link-label");
 var main = $("#main");
 
 
-btnNav.click(function(){
-  
-  function displayIcon(icon){
-      icon.addClass("iconlistAnim");
-    };
+function displayEachIcon(){
   var time = 0;
   iconList.each(function(){
-    time += 500;
+    time += 250;
     var icon = $(this);
     setTimeout(function(){
       icon.addClass("iconlistAnim");
+      icon.show()
     },time);
-
   });
+}
+
+btnNav.click(function(){
+
+  displayEachIcon();
 
 })
-
-
-
-
 
 // Functions --------------
     function changeMainRight(){
@@ -41,19 +38,23 @@ btnNav.click(function(){
     function addClassUl(){
       listNav.addClass("ulLeft");
       labelList.hide();
-      iconList.show();
+      displayEachIcon();
+      // iconList.show();
+      // displayEachIcon()
       // Display Icon and title ----
+
+      // titleNav.removeClass("opacityOff");
+      // listNav.removeClass("opacityOff");
+      // titleNav.addClass("opacityOn");
+      // listNav.addClass("opacityOn");
       listNav.animate({opacity:1},700);
       titleNav.animate({opacity:1},700);
     };
     
     var isFixed=false;
     $(document).scroll(function () {
-        // var scroll = $(this).scrollTop();
         var topDist = $("header").height()-160;
         // Set fixed
-         //  console.log("Headew :",topDist);
-         // console.log($(window).scrollTop());
         if( $(window).scrollTop()>=topDist && !isFixed ){
           isFixed=true;
 
@@ -70,8 +71,11 @@ btnNav.click(function(){
               // Animation hide list --------
               setTimeout(animHideList,750);
               function animHideList(){
-                titleNav.animate({opacity:0},500);
-                listNav.animate({opacity:0},500);
+                // titleNav.removeClass("opacityOn").addClass("opacityOff");
+                // listNav.removeClass("opacityOn").addClass("opacityOff");
+
+                titleNav.animate({opacity:0},400);
+                listNav.animate({opacity:0},400);
               };
               //  Change list by Icons ------
               setTimeout(addClassUl,1900)
@@ -92,6 +96,8 @@ btnNav.click(function(){
             // Hide list Icon --------------
             listNav.animate({opacity:0},500);
             titleNav.animate({opacity:0},500);
+                // titleNav.removeClass("opacityOn").addClass("opacityOff");
+                // listNav.removeClass("opacityOn").addClass("opacityOff");
            
             // Change Nav position ---------
             setTimeout(changeClassNavbar,500);
@@ -115,6 +121,8 @@ btnNav.click(function(){
               function displayList(){
                 labelList.show();
                 iconList.hide();
+                // titleNav.removeClass("opacityOff").addClass("opacityOn");
+                // listNav.removeClass("opacityOff").addClass("opacityOn");
                 listNav.animate({opacity:1},700);
                 titleNav.animate({opacity:1},700);
               }
