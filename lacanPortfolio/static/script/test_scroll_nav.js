@@ -21,8 +21,8 @@ var main = $("#main");
       labelList.hide();
       iconlist.show();
       // Display Icon and title ----
-      listNav.animate({opacity:1},500);
-      titleNav.removeClass("titleblur");
+      listNav.animate({opacity:1},700);
+      titleNav.animate({opacity:1},700);
     };
     
     var isFixed=false;
@@ -30,12 +30,11 @@ var main = $("#main");
         // var scroll = $(this).scrollTop();
         var topDist = $("header").height()-160;
         // Set fixed
-          console.log("Headew :",topDist);
-         console.log($(window).scrollTop());
+         //  console.log("Headew :",topDist);
+         // console.log($(window).scrollTop());
         if( $(window).scrollTop()>=topDist && !isFixed ){
           isFixed=true;
-          // navBar.addClass("navbarTopFixed");
-          // navBar.animate({"position":"fixed","top":"0","width":"100%"},500,animTopFixed());
+
           setTimeout(animTopFixed,500);
           function animTopFixed(){
             if(navBar.hasClass("navbarBase")||navBar.hasClass("navbarTop")){
@@ -47,10 +46,13 @@ var main = $("#main");
               // Animate for Main container-- 
               setTimeout(changeMainRight,1000);
               // Animation hide list --------
-              titleNav.addClass("titleblur");
-              listNav.animate({opacity:0},500);
+              setTimeout(animHideList,750);
+              function animHideList(){
+                titleNav.animate({opacity:0},500);
+                listNav.animate({opacity:0},500);
+              };
               //  Change list by Icons ------
-              setTimeout(addClassUl,1500)
+              setTimeout(addClassUl,1900)
               listNav.removeClass("ulTop");
               // navBar.toggleClass("navbarTopFixed");
               // navBar.css({"position":"fixed","top":"0","width":"10%"},500);
@@ -67,11 +69,8 @@ var main = $("#main");
           if(navBar.hasClass("navbarLeft") ){
             // Hide list Icon --------------
             listNav.animate({opacity:0},500);
-            // function Blur Title Nav -----
-            setTimeout(blurTitle,400);
-            function blurTitle(){
-              titleNav.addClass("titleblur");
-            }
+            titleNav.animate({opacity:0},500);
+           
             // Change Nav position ---------
             setTimeout(changeClassNavbar,500);
             function changeClassNavbar(){
@@ -94,8 +93,8 @@ var main = $("#main");
               function displayList(){
                 labelList.show();
                 iconlist.hide();
-                listNav.animate({opacity:1},500);
-                titleNav.removeClass("titleblur");
+                listNav.animate({opacity:1},700);
+                titleNav.animate({opacity:1},700);
               }
             }
           }
