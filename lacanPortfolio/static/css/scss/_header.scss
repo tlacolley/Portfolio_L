@@ -2,26 +2,41 @@ header{
     h1{
       color: $primaryColor;
     }
-    #btnNav{
-      position: fixed;
-      top: 50px;
-      right: 0;
-    }
-
     //  Class for animation Navbar
     .navbarBase{
       height:5rem;
-
     }
     .navbarTop{
       animation: navBarTopAnimate 2s  forwards;
     }
-
     .navbarLeft{
       height:5rem;
       animation: navBarLeftAnimate 2s 0.5s forwards;
-
     }
+    // Class for animation List
+    .ulLeft{
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    .ulTop{
+      flex-direction: row;
+       justify-content: end;
+    }
+    .opacityOff{
+      animation: hideList,0.5s forwards;
+    }
+    .opacityOn{
+      animation: showList,0.5s forwards;
+    }
+    .nav-link-icon{
+      display:none;
+      font-size:4rem;
+    }
+    .iconlistAnim{
+      animation:iconDisplay 1s forwards;
+    }
+
+
     //  Css base Navbar 
     nav{
       display:flex;
@@ -37,14 +52,8 @@ header{
         text-align: center;
         margin: 2% 0;
       }
-      .ulLeft{
-        flex-direction: column;
-        justify-content: space-around;
-      }
-      .ulTop{
-        flex-direction: row;
-         justify-content: end;
-      }
+
+
       // List base 
       ul{
         list-style: none;
@@ -59,24 +68,6 @@ header{
           font-weight: bolder;
 
         }
-      }
-      .opacityOff{
-        animation: hideList,0.5s forwards;
-      }
-      .opacityOn{
-        animation: showList,0.5s forwards;
-
-      }
-      .nav-link-icon{
-        display:none;
-        font-size:4rem;
-      }
-      .iconlistAnim{
-        animation:iconDisplay 1s forwards;
-      }
-
-      .titleblur{
-        animation:blurTitleNav 1s 0.5s;
       }
 
 
