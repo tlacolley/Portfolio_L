@@ -43,6 +43,10 @@ function displayEachIcon(){
   });
 }
 
+
+//  Condition for big Screen 
+if (window.matchMedia('(min-width: 990px)').matches) {
+
 // Code Animation Navbar--------------------------------------------------------
     var isFixed=false;
     $(document).scroll(function () {
@@ -86,6 +90,7 @@ function displayEachIcon(){
             // Change Nav position ---------
             setTimeout(changeClassNavbar,500);
             function changeClassNavbar(){
+              console.log("test001");
               navBar.toggleClass("navbarTop");
               navBar.removeClass("navbarLeft");
 
@@ -114,7 +119,9 @@ function displayEachIcon(){
         }
     });
 
-
+} else {
+    console.log("Else");
+}
 
 
 

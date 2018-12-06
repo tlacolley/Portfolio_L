@@ -27,24 +27,75 @@
 @keyframes navBarTopAnimate{
   0%{
     width:10%;
+    position:fixed;
     flex-direction:column;
+    opacity:1;
     height:100%;
     top:0;
     left:0;
   }
+  20%{
+    position:fixed;
+    width:10%;
+    height:0%;
+    opacity:0.7;
+  }
+  21%{
+    opacity:0;
+  }
   50%{
-      width:10%;
-      height:5rem;
-      top:0;
-      left:0;
-      flex-direction:row;
+    position:relative;
+    opacity:0;
+    height:5rem;
+    width:0%;
+  }
+  60%{
+    opacity:0;
+  }
+  80%{
+
   }
   100%{
-      height:5rem;
-      width:100%;
-  }
-}
+    width:100%;
+    height:5rem;
+    position:relative;
+    opacity:1;
+    flex-direction:row;
 
+  }
+
+}
+//   0%{
+//     width:10%;
+//     position:fixed;
+//     flex-direction:column;
+//     height:100%;
+//     top:0;
+//     left:0;
+//   }
+//   25%{
+//   }
+//   50%{
+
+//       width:10%;
+//       height:5rem;
+
+//       bottom:0;
+//       left:0;
+//       flex-direction:row;
+
+//   }
+//   75%{
+    
+//   }
+//   100%{
+//       height:5rem;
+//       width:100%;
+//       position:relative;
+
+//   }
+
+// }
 @keyframes hideList{
   0%{
     opacity:1;
@@ -82,6 +133,7 @@
     font-size: 4rem;
     filter:blur(0px);
     text-shadow: 0px 0px  10px rgba(0,214,252,1);
+    
 
   }
 }

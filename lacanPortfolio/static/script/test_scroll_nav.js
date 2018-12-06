@@ -38,6 +38,7 @@ function displayEachIcon(){
     var icon = $(this);
     setTimeout(function(){
       icon.addClass("iconlistAnim");
+
       icon.show()
     },time);
   });
@@ -66,6 +67,7 @@ function displayEachIcon(){
                 titleNav.animate({opacity:0},400);
                 listNav.animate({opacity:0},400);
               };
+
               //  Change list by Icons ------
               setTimeout(addClassUl,1900)
               listNav.removeClass("ulTop");

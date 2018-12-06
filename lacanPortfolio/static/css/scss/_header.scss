@@ -2,12 +2,21 @@ header{
     h1{
       color: $primaryColor;
     }
+    button{
+      background: $primaryColor;
+      span{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        font-weight: bold;
+      }
+    }
     //  Class for animation Navbar
     .navbarBase{
       height:5rem;
     }
     .navbarTop{
-      animation: navBarTopAnimate 2s  forwards;
+      animation: navBarTopAnimate 2s forwards;
     }
     .navbarLeft{
       height:5rem;
@@ -15,8 +24,10 @@ header{
     }
     // Class for animation List
     .ulLeft{
-      flex-direction: column;
+      flex-direction: column!important;
       justify-content: space-around;
+      height:100%;
+      width:100%;
     }
     .ulTop{
       flex-direction: row;
@@ -56,6 +67,7 @@ header{
 
       // List base 
       ul{
+        background-color: $secondaryColor;
         list-style: none;
         display: flex;
         justify-content: end;
@@ -63,14 +75,55 @@ header{
         padding-right: 10%;
         width: 50%;
         li{
-          text-transform: full-width;
+          text-transform: uppercase;
           font-size: 80%;
           font-weight: bolder;
 
         }
       }
-
-
+ 
 
     }
+}
+
+
+
+
+  
+
+@media screen and (max-width:990px) {
+header {
+  #titleNav{
+    margin: 1% ;
+  }
+  .navbar{
+      background: $secondaryColor;
+      padding:0;
+      display: flex;
+      justify-content: space-around;
+      ul{
+        margin: 0;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+         li{
+          font-size: 100%;
+        }
+      }
+   }
+  }
+}
+@media screen and (max-width:500px) {
+header {
+  .navbar{
+      ul{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        li{
+          font-size: 80%;
+        }
+    
+      }
+   }
+  }
 }
