@@ -2,15 +2,16 @@ header{
     h1{
       color: $primaryColor;
     }
-    button{
-      background: $primaryColor;
-      span{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        font-weight: bold;
+    h2{
+      a:hover{
+
+      // text-decoration:none;
+      // text-shadow:  0px 0px 10px rgba(0,214,252,1);
+      // color:white;
       }
+
     }
+
     //  Class for animation Navbar
     .navbarBase{
       height:5rem;
@@ -43,6 +44,9 @@ header{
       display:none;
       font-size:4rem;
     }
+    .nav-link-icon:hover{
+      color:blue;
+    }
     .iconlistAnim{
       animation:iconDisplay 1s forwards;
     }
@@ -57,7 +61,13 @@ header{
       color:$primaryTextColor;
       a{
         color:$primaryTextColor;
+      }
+      a:hover{
         text-decoration: none;
+        color:$primaryTextColor;
+
+        text-shadow:  0px 0px 10px rgba(0,214,252,1);
+
       }
       h2,ul{
         text-align: center;
@@ -96,6 +106,31 @@ header {
   #titleNav{
     margin: 1% ;
   }
+  #btnBurgerNav{
+      background-color: $primaryColor;
+    span{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        font-weight: bold;
+    }
+  }
+  .fixedNavbar{
+   animation: mobileNavTopAmin 1s forwards;
+  }
+  .navbar{
+
+    .navShowTel{
+      display: flex;
+      position: fixed;
+      top: 25%;
+      left: 0px;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 80%;
+      width: auto;
+    }
+  }
   .navbar{
       background: $secondaryColor;
       padding:0;
@@ -105,11 +140,18 @@ header {
         margin: 0;
         display:grid;
         grid-template-columns: 1fr 1fr;
+        padding:0;
          li{
           font-size: 100%;
         }
       }
    }
+  }
+  .btnFixed{
+    position: fixed;
+    font-size: 3rem;
+    top: 3%;
+    left: 3%;
   }
 }
 @media screen and (max-width:500px) {

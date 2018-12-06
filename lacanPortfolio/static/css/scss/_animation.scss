@@ -65,37 +65,7 @@
   }
 
 }
-//   0%{
-//     width:10%;
-//     position:fixed;
-//     flex-direction:column;
-//     height:100%;
-//     top:0;
-//     left:0;
-//   }
-//   25%{
-//   }
-//   50%{
 
-//       width:10%;
-//       height:5rem;
-
-//       bottom:0;
-//       left:0;
-//       flex-direction:row;
-
-//   }
-//   75%{
-    
-//   }
-//   100%{
-//       height:5rem;
-//       width:100%;
-//       position:relative;
-
-//   }
-
-// }
 @keyframes hideList{
   0%{
     opacity:1;
@@ -135,5 +105,20 @@
     text-shadow: 0px 0px  10px rgba(0,214,252,1);
     
 
+  }
+}
+
+
+@keyframes mobileNavTopAmin{
+    0%{
+    position:fixed;
+    top: -80px;
+    height:5rem;
+    width:100%;
+  }
+  100%{
+    width:100%;
+    position:fixed;
+    top: 0px;
   }
 }
