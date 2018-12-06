@@ -170,6 +170,10 @@ CMS_TEMPLATES = (
     ('sidebar_left.html', 'Sidebar Left'),
     ('sidebar_right.html', 'Sidebar Right'),
     ('home.html', 'Home Template'),
+    ('skills.html', 'Skills Template'),
+    ('about.html', 'About Template'),
+
+
 
 )
 

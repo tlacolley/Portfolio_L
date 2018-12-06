@@ -13,13 +13,20 @@
         <!-- {% cms_toolbar %} -->
         <div class="container">
             {% include 'header.html' %}
+            <main id="main" class="mainSection">
 
             {% block content %}{% endblock content %}
+
+
+            </main>
+
         </div>
         {% render_block "js" %}
         <script src="{% static 'jquery/dist/jquery.js' %}"></script>
         <script src="{% static 'bootstrap/dist/js/bootstrap.js' %}"></script>
         <script src="{% static 'script/script_navbar.js' %}"></script>
+        <script src="{% static 'script/script_skills.js' %}"></script>
+
 
 
     </body>

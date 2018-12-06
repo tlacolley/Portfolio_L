@@ -1,0 +1,30 @@
+.compDiv{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+
+}
+
+.disk{
+  margin: auto;
+  position:relative;
+  background-color: #67adbb;
+  border-radius:50%;
+  height: 15rem;
+  width: 15rem;
+}
+
+.skill{
+
+  background-color: lightgreen;
+  position:absolute;
+  border-radius:50%;
+  height: 90%;
+  width: 90%;
+  top: 5%;
+  left: 5%;
+}
+
+
+// -------------------------
+
+
