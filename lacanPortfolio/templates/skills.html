@@ -6,28 +6,22 @@
 
 {% block content %}
 
- {% placeholder "content" %}
+
 
 <section class="sec-skills">
       <h2>Compétences</h2>
 
-      <div class="skill-box">
-<!-- Btn open form en admin pour Add skills  -->
-       <div class="skills-circle">
-          <ul>
-            <!-- Parti a generer depuis la DB -->
-            <li data-percent="75"><span class="text">HTML5</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
+            {% placeholder "content" %}
+            {% include 'skillPlugin/all_skill_plugin.html' %}
+
+           <!--  <li data-percent="75"><span class="text">HTML5</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
 
 
             <li data-percent="75"><span class="text">Css</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
             <li data-percent="75"><span class="text">Js</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
              <li data-percent="75"><span class="text">Js</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
-              <li data-percent="75"><span class="text">Js</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li>
+              <li data-percent="75"><span class="text">Js</span><span class="bar-circle-right"></span><span class="bar-circle-left"></span><span class="bar-circle-cover"></span><b></b></li> --> 
 
-
-          </ul>
-        </div>
-      </div>
 
 </section>
 
