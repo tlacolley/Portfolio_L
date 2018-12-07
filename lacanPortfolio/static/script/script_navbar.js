@@ -45,7 +45,6 @@ function displayEachIcon(){
 
 //  Condition for big Screen 
 if (window.matchMedia('(min-width: 990px)').matches) {
-    console.log("iF");
 
 // Code Animation Navbar--------------------------------------------------------
     var isFixed=false;
@@ -118,14 +117,12 @@ if (window.matchMedia('(min-width: 990px)').matches) {
 
 // End if for screen 
 } else {
-    console.log("Else");
      var isFixed=false;
     $(document).scroll(function () {
         var topDist = $("header").height()-160;
         // Set fixed
         if( $(window).scrollTop()>=topDist && !isFixed ){
           isFixed=true;
-          console.log("ScrollOn");
           navBar.addClass("fixedNavbar");
           }
         // Set static
