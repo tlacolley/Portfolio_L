@@ -1,0 +1,86 @@
+
+$primaryColor: #7bc3d1;
+$primaryTextColor: white;
+
+.skill-box {
+
+  .skills-circle{
+
+      position: relative;
+
+      z-index: 1;
+
+      ul{
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0;
+        text-align: center;
+        list-style-type: none;
+        li{
+          width: 150px;
+          height: 150px;
+          background-color: black;
+          border-radius: 50%;
+          position: relative;
+          display: inline-block;
+          overflow: hidden;
+          margin: auto;
+          margin-bottom: 10%;
+          span{
+            color: $primaryTextColor;
+          }
+          .text{
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            margin-top: -25px;
+            z-index:1
+          }
+          span~b{
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+            margin-top: -8px;
+            z-index: 1;
+          }
+          span~b~b,.text~b{
+            font-weight: normal;
+            margin-top: 8px;
+          }
+          .bar-circle-right, .bar-circle-left{
+              position: absolute;
+              display: block;
+              width: 100%;
+              height: 100%;
+              background: $primaryTextColor;
+              clip: rect(0, 75px, 150px, 0);
+          }
+          .bar-circle-left{
+            background: black;
+          }
+          .bar-circle-cover{
+            display: block;
+            width: 90%;
+            height: 90%;
+            border-radius: 50%;
+            background-color: $primaryColor;
+            z-index: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+
+          }
+
+        }
+      }
+  }
+}

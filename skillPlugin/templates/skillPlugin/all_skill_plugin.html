@@ -1,0 +1,24 @@
+{% load cms_tags sekizai_tags static %}
+
+{% addtoblock "css" %}
+ <link rel="stylesheet" href="{% static 'css/skill_style.css' %}">
+{% endaddtoblock %}
+      <div class="skill-box">
+       <div class="skills-circle">
+          <ul>
+
+          {% for plugin in instance.child_plugin_instances %}
+
+              {% render_plugin plugin %}
+              
+          {% endfor %}
+
+            </ul>
+        </div>
+      </div>
+</div>
+
+
+{% addtoblock "js" %}
+ <script src="{% static 'script/script_skills.js' %}"></script>
+{% endaddtoblock %}

@@ -5,4 +5,4 @@ from django.apps import AppConfig
 
 
 class SkillspluginConfig(AppConfig):
-    name = 'skillsPlugin'
+    name = 'skillPlugin'
