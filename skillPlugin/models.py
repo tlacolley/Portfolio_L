@@ -19,5 +19,3 @@ class Skill(CMSPlugin):
   
 
 # Parent Container Model Plugin
-class SkillContainer(CMSPlugin):
-   skills = models.ManyToManyField(Skill)

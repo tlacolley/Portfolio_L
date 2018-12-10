@@ -1,5 +1,12 @@
+{% extends "base.html" %}
+{% load static cms_tags %}
 
- {% placeholder "content" %}
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+
+
+
+{% block content %}
+ {% placeholder content %}
 
 <section class="sec-about">
       <h2>A propos </h2>

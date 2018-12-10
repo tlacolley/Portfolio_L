@@ -44,6 +44,11 @@ function displayEachIcon(){
 }
 
 //  Condition for big Screen 
+
+
+function navbarScript(){
+
+
 if (window.matchMedia('(min-width: 990px)').matches) {
 
 // Code Animation Navbar--------------------------------------------------------
@@ -133,15 +138,14 @@ if (window.matchMedia('(min-width: 990px)').matches) {
 
         }
     });
-
-
+}
 
 }
 
-
-
-
-
+navbarScript();
+$(window).resize(function(){
+  navbarScript();
+});
 
 
 
